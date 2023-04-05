@@ -1,11 +1,11 @@
-:root {
-    --font-family: 'Open Sans', sans-serif;
-
+@font-face {
+    font-family: 'icones';
+    src: url(../font/icones.ttf);
 }
 
 body {
     background-color: #1d232a;
-    font-family: var(--font-family);
+    font-family: 'Open Sans', icones, sans-serif;
     color: #ffffff;
 
 }
@@ -17,6 +17,102 @@ body {
     background-color: #15191C;
     padding: 0.5em 1em;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.16);
-    
+
 }
 
+.cabecalho_menu i::before {
+    content: "\e904";
+    font-size: 1.5em;
+
+}
+
+.cabecalho_notificacao i::before {
+    content: "\e906";
+    font-size: 1.5em;
+}
+
+.cabecalho_logo {
+    width: 2.5em;
+
+}
+
+.menu-lateral {
+    display: flex;
+    flex-direction: column;
+    background-color: #15191c;
+    width: 75vw;
+    height: 100vh;
+
+    position: absolute;
+    left:-100vw;
+    transition: .35s;
+}
+
+.menu-lateral--ativo {
+    left: 0;
+    transition: .35s;
+}
+
+.menu-lateral_logo {
+    align-self: center;
+    width: 7.3em;
+    padding: 1em;
+
+}
+
+.menu-lateral_link {
+    height: 4em;
+    color: #95999C;
+    padding-left: 4em;
+    display: flex;
+    align-items: center;
+
+}
+
+.menu-lateral_link::before {
+    content: "\e900";
+    width: 1.5em;
+    height: 1.0em;
+    font-size: 1.5em;
+    position: absolute;
+    left: 1.5em;
+
+}
+
+.menu-lateral__link--inicio::before {
+    content: "\e902";
+    color: rgb(102, 161, 142);
+}
+
+.menu-lateral__link--videos::before {
+    content: "\e90e";
+    color: rgb(194, 37, 68);
+}
+
+.menu-lateral__link--picos::before {
+    content: "\e909";
+    color: brown;
+}
+
+.menu-lateral__link--integrantes::before {
+    content: "\e903";
+    color: green;
+}
+
+.menu-lateral__link--camisas::before {
+    content: "\e900";
+    color: rgb(196, 196, 75);
+}
+
+
+.menu-lateral__link--pinturas::before {
+    content: "\e90a";
+    color: rgb(133, 108, 182);
+}
+
+.menu-lateral__link--ativo {
+    color:#ffffff;
+    padding-left: 3.5em;
+    border-left: 0.5em solid #ffffff;
+    
+}
